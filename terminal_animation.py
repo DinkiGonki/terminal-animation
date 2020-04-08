@@ -9,6 +9,7 @@ Author: mdq3
 2012/05/16
 
 """
+import sys
 from sys import platform
 import time
 import os
@@ -23,14 +24,31 @@ if platform == "linux" or platform == "linux2":
 elif platform == "win32":
     command = "cls"
 
-def animate():
+def animate_dollar():
     """Iterate through the frames, printing then clearing each one to create an animation."""
     count = 0
     while count < cycles:
-        for frame in devsoft.frames:
+        for frame in devsoft.dollar:
             print(frame)  # Print the frame in color blue.
             time.sleep(duration)
             print(os.system(command))
         count = count + 1
 
-animate()
+def animate_isometric():
+    """Iterate through the frames, printing then clearing each one to create an animation."""
+    count = 0
+    while count < cycles:
+        for frame in devsoft.isometric:
+            print(frame)  # Print the frame in color blue.
+            time.sleep(duration)
+            print(os.system(command))
+        count = count + 1
+
+if __name__ == "__main__":
+    if (len(sys.argv) > 1) and (sys.argv[1] == "isom"):
+        animate_isometric()
+    if (len(sys.argv) > 1) and (sys.argv[1] == "dollar"):
+        animate_dollar()
+    if len(sys.argv) == 1:
+        animate_dollar()
+    
