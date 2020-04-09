@@ -15,7 +15,7 @@ For output run_anim type:
 <div align="center"><a href="https://github.com/mdq3/terminal-animation"><img src="https://i.ibb.co/hd14DVj/run.gif" alt="Animation" /></a></div>
 
 
-#Generate ascii logo by [patorjk.com](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20) with "isometric" and "big money" style
+# Generate ascii logo by [patorjk.com](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20) with "isometric" and "big money" style
 
 
 For output devsoft_dollar anim type
