@@ -13,7 +13,8 @@ import sys
 from sys import platform
 import time
 import os
-import devsoft
+import devsoft #devsoft logo
+import animation
 
 duration = 0.15    # The duration of time in seconds between each frame.
 cycles = 100       # The number of cycles the animation plays through.
@@ -41,14 +42,26 @@ def animate_isometric():
         for frame in devsoft.isometric:
             print(frame)  # Print the frame in color blue.
             time.sleep(duration)
-            print(os.system(command))
+            print(os.system(command))  
+        count = count + 1
+def animated_run():
+    """Iterate through the frames, printing then clearing each one to create an animation."""
+    count = 0
+    duration = 0.05
+    while count < cycles:
+        for frame in animation.frames:
+            print(frame)  # Print the frame in color blue.
+            time.sleep(duration)
+            print(os.system(command))  
         count = count + 1
 
 if __name__ == "__main__":
-    if (len(sys.argv) > 1) and (sys.argv[1] == "isom"):
+    if (len(sys.argv) > 1) and (sys.argv[1] == "devsoft2"):
         animate_isometric()
-    if (len(sys.argv) > 1) and (sys.argv[1] == "dollar"):
+    if (len(sys.argv) > 1) and (sys.argv[1] == "devsoft1"):
         animate_dollar()
+    if (len(sys.argv) > 1) and (sys.argv[1] == "run"):
+        animated_run()
     if len(sys.argv) == 1:
         animate_dollar()
     
